@@ -28,7 +28,7 @@ class Receiver:
         for mail_id in self.imapper.listids():
             mail = self.imapper.mail(mail_id)
 
-            if (((subject == "") or (mail.title == subject)) and
+            if (((subject == "") or (subject in mail.title)) and
                 ((sender == "") or (mail.from_addr == sender)) and
                 ((body == "") or (body in mail.body)) and
                ((attachments == "") or (attachment in mail.attachments))):
