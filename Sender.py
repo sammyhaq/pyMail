@@ -11,14 +11,13 @@ class Sender:
     def __init__(self,
                  LOGIN,
                  PASSWORD,
-                 SENDER=None,
                  RECEIVERS=[],
                  SUBJECT="",
                  MESSAGE=""):
 
         self.login = LOGIN
         self.password = PASSWORD
-        self.sender = SENDER
+        self.sender = LOGIN
         self.receivers = RECEIVERS
         self.subject = SUBJECT
         self.message = MESSAGE
